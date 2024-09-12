@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:wght@300;400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideInDown 1s ease-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        nav {
+            background-color: #003366;
+            color: #fff;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="date"], 
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            padding: 6px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #003366;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+    background-color: #002244;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>สมัครสมาชิก</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">ประวัติความเป็นมา</a></li>
+            <li><a href="page2.html">ปรัชญา วิสัยทัศน์ พันธกิจ</a></li>
+            <li><a href="page3.html">อัตลักษณ์และเอกลักษณ์</a></li>
+            <li><a href="page4.html">นโยบายของวิทยาลัย</a></li>
+            <li><a href="page5.html">ทำเนียบผู้บริหาร</a></li>
+            <li><a href="Resume061.html">ผู้จัดทำ</a></li>
+            <li><a href="form.html">สมัครสมาชิก</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>สมัครสมาชิก</h1>
+        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+            <label for="first_name">ชื่อ:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">นามสกุล:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="dob">วันเดือนปีเกิด:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">ยืนยันรหัสผ่าน:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <label for="profile_picture">เลือกรูปโปรไฟล์:</label>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+
+            <input type="submit" value="สมัครสมาชิก">
+        </form>
+    </div>
+
+<footer>
+        <p>&copy; 2024 วิทยาลัยเทคนิคสัตหีบ</p>
+    </footer>
+</body>
+</html>
