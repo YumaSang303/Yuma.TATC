@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การศึกษาต่อระดับมัธยมปลายหรือ ปวช</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('D:/NatthawatLnwza 051/PG/eznoob.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            margin: auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffdd57;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .form-container h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: #ffdd57;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .form-container label {
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container select, 
+        .form-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .form-container input[type="text"]:focus, 
+        .form-container input[type="email"]:focus, 
+        .form-container select:focus, 
+        .form-container textarea:focus {
+            background: rgba(255, 255, 255, 0.4);
+            outline: none;
+            box-shadow: 0 0 10px #ffdd57;
+        }
+
+        .form-container select {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-container select option {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .form-container textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .form-container .checkbox-container, 
+        .form-container .radio-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .form-container .checkbox-container label, 
+        .form-container .radio-container label {
+            width: auto;
+            font-size: 1rem;
+            color: #ffdd57;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .form-container input[type="checkbox"],
+        .form-container input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+            accent-color: #ffdd57;
+            transform: scale(1.3);
+        }
+
+        .form-container input[type="file"] {
+            padding: 10px 0;
+            color: #ffffff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .form-container button {
+            background-color: #ffdd57;
+            color: #333333;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container button:hover {
+            background-color: #e5c047;
+        }
+
+        .form-container button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            transition: transform 0.3s;
+            transform: scale(0);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .form-container button:hover::after {
+            transform: scale(1);
+        }
+
+        .form-container button span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-container .reset-btn {
+            background-color: #555555;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+
+        .form-container .reset-btn:hover {
+            background-color: #444444;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>การศึกษาต่อ</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="name">ชื่อ-นามสกุล:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="education-level">เลือกระดับการศึกษา:</label>
+            <select id="education-level" name="education-level" required>
+                <option value="">-- กรุณาเลือกระดับการศึกษา --</option>
+                <option value="highschool">มัธยมปลาย</option>
+                <option value="vocational">ปวช</option>
+            </select>
+
+            <label>สายการเรียนที่สนใจ:</label>
+            <div class="checkbox-container">
+                <label><input type="checkbox" name="interested-field" value="science"> สายวิทยาศาสตร์</label>
+                <label><input type="checkbox" name="interested-field" value="arts"> สายศิลป์</label>
+                <label><input type="checkbox" name="interested-field" value="technology"> สายเทคโนโลยี</label>
+                <label><input type="checkbox" name="interested-field" value="business"> สายบริหารธุรกิจ</label>
+            </div>
+
+            <label>ประเภทของโรงเรียนที่สนใจ:</label>
+            <div class="radio-container">
+                <label><input type="radio" name="school-type" value="public" required> โรงเรียนรัฐบาล</label>
+                <label><input type="radio" name="school-type" value="private" required> โรงเรียนเอกชน</label>
+                <label><input type="radio" name="school-type" value="vocational" required> วิทยาลัยอาชีวศึกษา</label>
+            </div>
+
+            <label for="bio">เหตุผลที่เลือกสายการเรียนนี้:</label>
+            <textarea id="bio" name="bio" placeholder="กรอกข้อมูลเพิ่มเติม..."></textarea>
+
+            <label for="profile-pic">อัปโหลดรูปภาพ:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+
+            <button type="submit"><span>ยืนยันการเลือก</span></button>
+            <button type="reset" class="reset-btn"><span>ล้างข้อมูล</span></button>
+        </form>
+    </div>
+</body>
+</html>

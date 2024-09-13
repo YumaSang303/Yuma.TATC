@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อัตลักษณ์และเอกลักษณ์ วิทยาลัยเทคนิคสัตหีบ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* สีพื้นหลัง ขาว */
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: -1;
+            filter: blur(5px);
+        }
+
+        header {
+            background: linear-gradient(to right, rgba(0, 0, 51, 0.85), rgba(192, 192, 192, 0.85)), url('C:/Users/killu/Downloads/unnamed1.jpg') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-attachment: fixed;
+        }
+
+        header .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+
+        header h1 {
+            font-size: 4rem; /* ลดขนาดจาก 4.5rem */
+            margin: 0;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav {
+            background-color: #00264d;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem; /* ลดขนาดจาก 1.4rem */
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #c0c0c0;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container h2 {
+            font-size: 2.5rem; /* ลดขนาดจาก 3rem */
+            color: #00264d;
+            text-transform: uppercase;
+            margin-bottom: 20px; /* ลดระยะห่าง */
+            position: relative;
+            padding-bottom: 10px; /* ลดระยะห่าง */
+            border-bottom: 2px solid #c0c0c0; /* เส้นใต้บางลง */
+            display: inline-block;
+            background: linear-gradient(to right, #c0c0c0, #00264d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            line-height: 1.8; /* เพิ่มความชัดเจนของบรรทัด */
+            z-index: 1;
+            position: relative;
+            color: #555;
+            text-align: center; /* ทำให้เนื้อหากลางหน้า */
+        }
+
+        .container p, .container ul {
+            margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของเนื้อหา */
+        }
+
+        footer {
+            background-color: #00264d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem; /* ลดขนาด */
+        }
+
+        footer p::before {
+            content: '\2764';
+            display: inline-block;
+            margin-right: 10px;
+            color: #c0c0c0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัวของเว็บ -->
+    <header>
+        <img src="unnamed1.gif" alt="วิทยาลัยเทคนิคสัตหีบ" class="logo">
+        <h1>อัตลักษณ์และเอกลักษณ์</h1>
+    </header>
+
+    <!-- เมนูนำทาง -->
+    <nav>
+        <ul>
+            <li><a href="index051.html">ประวัติความเป็นมา</a></li>
+            <li><a href="index0512.html">ปรัชญา วิสัยทัศน์ พันธกิจ</a></li>
+            <li><a href="index3.html">อัตลักษณ์และเอกลักษณ์</a></li>
+            <li><a href="index4.html">นโยบายของวิทยาลัย</a></li>
+            <li><a href="index5.html">ทำเนียบผู้บริหาร</a></li>
+	    <li><a href="from.html">การศึกษาต่อ</a></li>
+        </ul>
+    </nav>
+    <!-- เนื้อหา -->
+    <div class="container">
+        <section id="executives">
+            <h2>อัตลักษณ์และเอกลักษณ์</h2>
+            <p>'เรียนดี มีวินัย ใฝ่สร้างสรรค์ ขยันทำงาน ผสานคุณธรรม'</p>
+            <p><strong>อัตลักษณ์:</strong> 'ทักษะเยี่ยม เปี่ยมคุณธรรม'</p>
+            <p><strong>เอกลักษณ์:</strong> 'มุ่งผลิตกำลังคน ที่มีสมรรถนะ และคุณภาพสู่สากล'</p>
+        </section>
+    </div>
+
+    <!-- ส่วนท้ายเว็บ -->
+    <nav>
+        <ul>
+            <li><a href="TAM1.html">ผู้จัดทำ</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
